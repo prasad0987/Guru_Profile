@@ -9,7 +9,6 @@ const NotFound = () => {
   return (
     <div className="notfound-page">
       <div className="notfound-container">
-        {/* Logo */}
         <img src={vg_logo} alt="Guru Logo" className="notfound-logo" />
 
         <h1>404</h1>
