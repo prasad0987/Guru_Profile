@@ -1,0 +1,230 @@
+/* ---------- NAVBAR BASE ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 32px;
+  background: rgba(255, 255, 255, 0.9); /* glass effect */
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* ---------- LOGO ---------- */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out;
+}
+
+.logo-image:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/* ---------- NAV LINKS ---------- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* underline hover effect */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* ---------- BUTTON (DESKTOP DEFAULT) ---------- */
+.btn {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #0056b3, #004099);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,123,255,0.4);
+}
+
+/* ---------- HAMBURGER ICON ---------- */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+  transform: rotate(90deg);
+}
+
+/* ---------- MOBILE STYLES ---------- */
+@media (max-width: 768px) {
+  /* --- Nav Links Container (remains the same) --- */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  /* Slide-down animation when menu opens (remains the same) */
+  .nav-links.open {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+  }
+
+  /* ---------- BUTTON (MOBILE VERSION) - UPDATED FOR SMALLER TEXT ---------- */
+   .nav-links .btn {
+    margin: 10px auto 15px auto;
+    display: block;
+    width: auto;
+    max-width: 180px; 
+    
+    /* Applying your exact requested styling */
+    padding: 5px 13px; 
+    font-weight: 600;
+    font-size: 5px; /* Note: 5px is extremely small and likely unreadable. */
+    
+    /* Ensures text stays on a single line */
+    white-space: nowrap; 
+    
+    border-radius: 20px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+ /* ---------- MOBILE STYLES (UPDATED) ---------- */
+@media (max-width: 768px) {
+  
+  /* =======================================================
+     1. STYLES FOR THE TOP-RIGHT BUTTON (The one next to the logo)
+     ======================================================= */
+  .btn {
+    /* Applying your compact padding */
+    padding: 5px 13px; 
+    
+    /* Using a minimum readable font size for the button text */
+    font-size: 10px; 
+    font-weight: 600;
+    
+    /* Ensures text does not wrap to a new line */
+    white-space: nowrap; 
+    
+    /* Reduced border-radius to better fit the compact size */
+    border-radius: 18px; 
+    
+    /* Remove shadow on mobile for a cleaner, flatter look */
+    box-shadow: none; 
+    
+    /* Override any transform or hover effects from the desktop style */
+    transform: none; 
+  }
+
+  /* =======================================================
+     2. STANDARD MOBILE MENU STYLES
+     ======================================================= */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .nav-links.open {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+  }
+
+  /* =======================================================
+     3. STYLES FOR THE BUTTON INSIDE THE MENU
+     ======================================================= */
+  .nav-links .btn {
+    margin: 10px auto 15px auto;
+    display: block; 
+    width: auto;
+    max-width: 180px; 
+    
+    /* This button inherits the compact styles from the .btn rule above */
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+}
