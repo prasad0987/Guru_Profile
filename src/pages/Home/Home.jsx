@@ -30,7 +30,7 @@ const Home = () => {
       <section className="about" id="about">
         <h2>About Me</h2>
         <p>
-          I’m passionate about teaching, mentoring, and building real-world 
+          I’m passionate about teaching, mentoring, and building real-world DevOps  and
           fullstack applications using <strong>Java, Spring Boot, React, and SQL</strong>.  
           My mission is to simplify complex tech concepts for students and 
           professionals through courses, blogs, and career support.
