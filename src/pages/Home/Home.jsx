@@ -9,15 +9,15 @@ const Home = () => {
       {/* ---------- HERO SECTION ---------- */}
       <section className="hero">
         <div className="hero-text">
-          <h1>Hi, I’m Gurubabu </h1>
+          <h1>Hi, I’m Guru Prasad </h1>
           <p>
-            A <strong>Java Fullstack Developer</strong> helping students and professionals 
+            A <strong>DevOps Engineer</strong> helping students and professionals 
             build strong coding skills, crack interviews, and grow in their tech careers.
           </p>
           <div className="hero-buttons">
             <a href="#services" className="btn">Explore My Services</a>
-            <a href="https://www.youtube.com/@V_Guru" target="_blank" rel="noreferrer" className="btn btn-outline">
-              Visit My YouTube
+            <a href="https://github.com/prasad0987" target="_blank" rel="noreferrer" className="btn btn-outline">
+              Visit My GitHub
             </a>
           </div>
         </div>
